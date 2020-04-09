@@ -698,6 +698,11 @@ ramips_setup_macs()
 	zyxel,keenetic-start)
 		wan_mac=$(mtd_get_mac_binary factory 40)
 		;;
+	mr-108n|\
+	br-6225hpn)
+		wan_mac=$(mtd_get_mac_binary factory 46)
+		lan_mac=$(mtd_get_mac_binary factory 40)
+		;;
 	*)
 		lan_mac=$(cat /sys/class/net/eth0/address)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
