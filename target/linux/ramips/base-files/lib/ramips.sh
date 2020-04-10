@@ -309,13 +309,7 @@ ramips_board_detect() {
 		;;
 	*"MR-102N")
 		name="mr-102n"
-		;;
-	*"MR-108N")
-		name="mr-108n"
-		;;
-	*"BR-6225HPn")
-		name="br-6225hpn"
-		;;		
+		;;	
 	*"MR200")
 		name="mr200"
 		;;
@@ -708,6 +702,12 @@ ramips_board_detect() {
 		;;
 	*"YK1")
 		name="youku-yk1"
+		;;
+	*"MR-108N")
+		name="mr-108n"
+		;;
+	*"BR-6225HPn")
+		name="br-6225hpn"
 		;;
 	esac
 

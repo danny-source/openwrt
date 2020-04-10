@@ -66,41 +66,36 @@
 	leds {
 		compatible = "gpio-leds";
 
-		user {
-			label = "mr-108n:amber:user";
-			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
-			trigger-sources = <&otg_port1>;
-			linux,default-trigger = "usbport";
+		led_power: power {
+			label = "mr-108n:green:power";
+			gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 		};
 
-		led_power: power {
-			label = "mr-108n:amber:power";
-			gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
-		};
 	};
 
 	keys {
 		compatible = "gpio-keys-polled";
 		poll-interval = <20>;
 
+		reset {
+			label = "reset";
+			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_RESTART>;
+		};
+
 		wps {
 			label = "wps";
-			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 
-		reset {
-			label = "reset";
-			gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
-			linux,code = <KEY_RESTART>;
-		};
 	};
 };
 
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "spi", "i2c", "jtag", "rgmii", "mdio", "uartf";
+			ralink,group = "i2c", "jtag", "rgmii", "mdio", "uartf";
 			ralink,function = "gpio";
 		};
 	};

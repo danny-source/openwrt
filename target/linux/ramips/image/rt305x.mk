@@ -515,21 +515,6 @@ define Device/mr-102n
 endef
 TARGET_DEVICES += mr-102n
 
-define Device/mr-108n
-  DTS := MR-108N
-  BLOCKSIZE := 64k
-  IMAGE_SIZE := $(ralink_default_fw_size_8M)
-  DEVICE_TITLE := AXIMCom MR-108N
-endef
-TARGET_DEVICES += mr-108n
-
-define Device/br-6225hpn
-  DTS := BR-6225HPn
-  BLOCKSIZE := 64k
-  IMAGE_SIZE := $(ralink_default_fw_size_8M)
-  DEVICE_TITLE := Edimax br-6225hpn
-endef
-
 TARGET_DEVICES += br-6225hpn
 
 define Device/mzk-dp150n
@@ -942,3 +927,18 @@ define Device/zorlik_zl5900v2
   DEVICE_PACKAGES := kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-ledtrig-netdev
 endef
 TARGET_DEVICES += zorlik_zl5900v2
+
+define Device/mr-108n
+  DTS := MR-108N
+  BLOCKSIZE := 64k
+  IMAGE_SIZE := $(ralink_default_fw_size_8M)
+  DEVICE_TITLE := AXIMCom MR-108N
+endef
+TARGET_DEVICES += mr-108n
+
+define Device/br-6225hpn
+  DTS := BR-6225HPn
+  BLOCKSIZE := 64k
+  IMAGE_SIZE := $(ralink_default_fw_size_8M)
+  DEVICE_TITLE := Edimax br-6225hpn
+endef

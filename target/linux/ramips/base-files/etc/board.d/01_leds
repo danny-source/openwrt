@@ -18,9 +18,6 @@ br-6475nd|\
 mzk-w300nh2)
 	set_wifi_led "$boardname:amber:wlan"
 	;;
-br-6225hpn)
-	set_wifi_led "$boardname:amber:wlan"
-	;;
 3g-6200nl|\
 air3gii|\
 hilink,hlk-7628n|\
@@ -449,6 +446,9 @@ youku-yk1)
 	set_wifi_led "$boardname:blue:air"
 	ucidef_set_led_switch "wan" "wan" "$boardname:blue:wan" "switch0" "0x10"
 	;;
+br-6225hpn)
+	set_wifi_led "$boardname:amber:wlan"
+	;;	
 esac
 
 board_config_flush
